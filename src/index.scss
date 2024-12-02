@@ -1,4 +1,8 @@
 @import './theme.scss';
-.heading-1 {
-    color: $primarycolor;
+// avoid bootstrap styles...
+.form-control:focus {
+    background-color: transparent !important;
+    border-color: none !important;
+    outline: 0;
+    box-shadow: none !important;
 }
