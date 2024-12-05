@@ -5,6 +5,8 @@ import CartIcon from "../../assets/icons/cart.svg";
 import { NavLink } from 'react-router-dom';
 import { Sidebar } from '../sidebar/sidebar';
 import { sidebarContext } from '../../context/sidebar.context';
+import { GlobalSearch } from '../globalsearch/global-search.jsx';
+import { Cart } from '../Cart/cart.jsx';
 
 export const Navbar = () => {
     // const  [Is_Sidebar,sidebarOpen,sidebarClose] = useContext(sidebarContext)
@@ -25,27 +27,22 @@ export const Navbar = () => {
             <NavLink to = '/' className={`${styles.nav_link_item} nav-link active fw-semibold`}> Home</NavLink>
           </li>
           <li className="nav-item mx-3">
-          <NavLink to = '/' className={`${styles.nav_link_item} nav-link active fw-semibold`}> Contact</NavLink>
+          <NavLink to = '/contact' className={`${styles.nav_link_item} nav-link active fw-semibold`}> Contact</NavLink>
           </li>
           <li className="nav-item mx-3">
-          <NavLink to = '/' className={`${styles.nav_link_item} nav-link active fw-semibold`}> About</NavLink>
-          </li>
-          <li className="nav-item mx-3">
-          <NavLink to = '/' className={`${styles.nav_link_item} nav-link active fw-semibold`}> Signup</NavLink>
+          <NavLink to = '/About' className={`${styles.nav_link_item} nav-link active fw-semibold`}> About</NavLink>
           </li>
          
+          <li className="nav-item mx-3">
+          <NavLink to = '/Signup' className={`${styles.nav_link_item} nav-link active fw-semibold`}> Signup</NavLink>
+          </li>
          
           
         </ul>
         <form className="d-flex" role="search">
-            <div className={`${styles.global_search_container} d-flex`}>
-          <input className="form-control me-2" type="search" placeholder="What are you lookinng for?" aria-label="Search"/>
-          <img src={SearchIcon} className='me-2' alt="" />
-
-            </div>
-            <div className={`${styles.shopping_cart_icon} ms-2`}>
-                <img src={CartIcon} alt="cart icon" />
-            </div>
+            <GlobalSearch></GlobalSearch>
+            <Cart></Cart>
+            
         </form>
       </div>
     </div>

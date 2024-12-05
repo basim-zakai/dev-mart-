@@ -4,14 +4,47 @@
     width: 300px;
     position: fixed;
     z-index: 10;
-    box-shadow: 6px 5px 5px grey;
+    box-shadow: -4px 0px 6px -1px rgba(0, 0, 0, 0.3);
     right: 0;
     top: 0;
-    // background-color: $pagebackground;
-    background-color: red;
-    transition: 0.3s ease-in-out;
+    background-color: $pagebackground;
+    transition: all 0.3s ease-in-out;
     transform: translateX(100%);
+    .icon {
+        font-size: 30px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
     &.active {
         transform: translateX(0%);
+    }
+    .sidebar_content_container {
+        margin-top: 80px;
+        .global_search_wrapper {
+            margin-left: 25px;
+            margin-bottom: 100px;
+        }
+        .shopping_cart_container {
+            display: flex;
+            margin-left: 28px;
+            gap: 74px;
+        }
+        .nav_link_container {
+            >ul {
+                list-style: none;
+                li {
+                    margin: 15px 0px;
+                    font-size: 22px;
+                    a {
+                        display: inline-block;
+                        height: 30px;
+                        &:hover {
+                            border-bottom: 1px solid $dark;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

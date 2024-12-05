@@ -5,5 +5,6 @@ export const PublicRoute = createBrowserRouter([
     {
         path :'/',
        element: <Homepage></Homepage>
+       
     }
 ])
