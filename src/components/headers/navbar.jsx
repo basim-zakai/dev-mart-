@@ -34,7 +34,7 @@ export const Navbar = () => {
           </li>
          
           <li className="nav-item mx-3">
-          <NavLink to = '/Signup' className={`${styles.nav_link_item} nav-link active fw-semibold`}> Signup</NavLink>
+          <NavLink to = '/auth/signup' className={`${styles.nav_link_item} nav-link active fw-semibold`}> Signup</NavLink>
           </li>
          
           

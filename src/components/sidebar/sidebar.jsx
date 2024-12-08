@@ -28,7 +28,7 @@ export const Sidebar = () => {
         <li><NavLink to='/' className={`${styles.nav_link_item} nav-link active`} >Home</NavLink></li>
         <li><NavLink to='/contact' className={`${styles.nav_link_item} nav-link active`} >Contact</NavLink></li>
         <li><NavLink to='/about' className={`${styles.nav_link_item} nav-link active`} >About</NavLink></li>
-        <li><NavLink to='/signup' className={`${styles.nav_link_item} nav-link active`} >SignUp</NavLink></li>
+        <li><NavLink to='/auth/signup' className={`${styles.nav_link_item} nav-link active`} >SignUp</NavLink></li>
       
     </ul>
 </div>

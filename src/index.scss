@@ -6,3 +6,32 @@
     outline: 0;
     box-shadow: none !important;
 }
+
+// General styles...
+// auth title and headings...
+.auth_heading {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.auth_title {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+//auth link style
+.login_link {
+    text-decoration: none;
+    color: $dark;
+    font-weight: 400;
+    border-bottom: 1px solid $dark;
+    margin-left: 5px;
+}
+
+.forget_password_link {
+    text-decoration: none;
+    color: $primarycolor;
+    font-weight: 400;
+    border-bottom: 1px solid $primarycolor;
+    // margin-left: 5px;
+}
