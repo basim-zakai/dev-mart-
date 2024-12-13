@@ -7,9 +7,13 @@ import { Sidebar } from '../sidebar/sidebar';
 import { sidebarContext } from '../../context/sidebar.context';
 import { GlobalSearch } from '../globalsearch/global-search.jsx';
 import { Cart } from '../Cart/cart.jsx';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeUser } from '../../redux/user-slice.jsx';
 
 export const Navbar = () => {
-    // const  [Is_Sidebar,sidebarOpen,sidebarClose] = useContext(sidebarContext)
+  const isLogin = useSelector(state=> state.user.isLoggin)
+  const dispatch = useDispatch();
+     // const  [Is_Sidebar,sidebarOpen,sidebarClose] = useContext(sidebarContext)
     const { is_sidebar, sidebarOpen } = useContext(sidebarContext);
 
     
@@ -33,9 +37,15 @@ export const Navbar = () => {
           <NavLink to = '/About' className={`${styles.nav_link_item} nav-link active fw-semibold`}> About</NavLink>
           </li>
          
+         {isLogin? 
+           <li className="nav-item mx-3">
+          <NavLink onClick={()=> dispatch(removeUser())} className={`${styles.nav_link_item} nav-link active fw-semibold`}> Sign Out</NavLink>
+          </li> 
+           : 
           <li className="nav-item mx-3">
           <NavLink to = '/auth/signup' className={`${styles.nav_link_item} nav-link active fw-semibold`}> Signup</NavLink>
-          </li>
+          </li>} 
+         
          
           
         </ul>

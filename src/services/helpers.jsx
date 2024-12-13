@@ -6,7 +6,10 @@ export const Helper = {
         return emailRegex.test(email);
     },
     validatePassword(password){
-        return password.length > 8;
+        return password.length > 7;
+    },
+    validatename(name){
+        return name.length > 2;
     }
  
 }
